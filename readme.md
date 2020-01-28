@@ -7,9 +7,9 @@ This is the repository for the paper Neural Topic Model with Attention for Super
 * The 20 newsgroups dataset is obtained from [https://github.com/alexeygrigorev/datasets/tree/master/20-newsgroups/preprocessed](https://github.com/alexeygrigorev/datasets).
 
 * To train a Topic Attention Model (TAM) with 50 topics:
-'''
+```
 python train_topical.py --num_topics 50
-'''
+```
 The default vocabulary size is 2000. Can be changed by selecting your own vocabulary. For other changable hyperparameters, see train_topical.py. train_vanilla.py is for the Attention-RNN baseline. train_topic_model.py is for the GSM baseline. They are of the similar usage.
 
 ## Citation
