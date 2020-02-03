@@ -194,10 +194,7 @@ class Topical_attention_model(Vanilla_attention_model):
     # overrider
     def train_settings(self, out_dir, lr, sess, pretrain_epoch=0, ckpt_name=None):
         timestamp = str(int(time.time()))
-        if self.K>0:
-            self.out_dir = os.path.abspath(os.path.join(os.path.curdir, out_dir)+str(self.K))
-        else:
-            self.out_dir = os.path.abspath(os.path.join(os.path.curdir, out_dir))
+        self.out_dir = os.path.abspath(os.path.join(os.path.curdir, out_dir))
         print("Model Writing to {}\n".format(self.out_dir))
         self.global_step = tf.Variable(0, trainable=False)
         

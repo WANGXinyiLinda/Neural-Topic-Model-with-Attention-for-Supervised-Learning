@@ -2,6 +2,12 @@
 
 This is the repository for the paper Neural Topic Model with Attention for Supervised Learning, to appear at AISTATS 2020.
 
+## Requirements
+
+* Python 3.6.5
+* Tensorflow 1.14.0
+* NLTK
+
 ## Usage
 
 * The 20 newsgroups dataset is obtained from [https://github.com/alexeygrigorev/datasets/tree/master/20-newsgroups/preprocessed](https://github.com/alexeygrigorev/datasets).

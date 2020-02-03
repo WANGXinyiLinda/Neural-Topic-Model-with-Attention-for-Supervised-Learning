@@ -41,7 +41,7 @@ class VariationalTopicModel(object):
             self.epsilon = tf.random_normal((tf.shape(self.logvar_encoder)), 0, 1, name='epsilon')
 
             self.std_dev = tf.sqrt(tf.exp(self.logvar_encoder))
-            self.h = tf.add(self.mu_encoder, tf.multiply(self.std_dev, self.epsilon))
+            self.h = self.mu_encoder + self.std_dev * self.epsilon
 
         with tf.variable_scope("decoder"):
             # topic: doc-topic distribution. shape: [batch_size, num_topic]
